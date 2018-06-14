@@ -226,12 +226,12 @@ document.onkeyup = function(event) {
 	document.getElementById("guesses_remaining").textContent = guessesRemaining;
 	document.getElementById("wins").textContent = wins;
 
-	for(var i = 0; i < selectedWord.length; i++) {
-		charactersOfSelectedWord.push(selectedWord.charAt(i));
-		if(alphabet.indexOf(selectedWord.charAt(i).toLowerCase()) > -1)
+	for(var r = 0; r < selectedWord.length; r++) {
+		charactersOfSelectedWord.push(selectedWord.charAt(r));
+		if(alphabet.indexOf(selectedWord.charAt(r).toLowerCase()) > -1)
 			stringOfUnderlines = stringOfUnderlines.concat("_");
 		else
-			stringOfUnderlines = stringOfUnderlines.concat(selectedWord.charAt(i));
+			stringOfUnderlines = stringOfUnderlines.concat(selectedWord.charAt(r));
 	}
 
 	document.getElementById("current_word").textContent = stringOfUnderlines;
@@ -252,9 +252,9 @@ document.onkeyup = function(event) {
 				document.getElementById("letters_guessed").textContent = lettersGuessed;
 			}
 			else {
-				for(var j = 0; j < charactersOfSelectedWord.length; j++) {
-					if(userChoice === charactersOfSelectedWord[j].toLowerCase())
-						stringOfUnderlines = stringOfUnderlines.substr(0,j) + charactersOfSelectedWord[j] + stringOfUnderlines.substr(j+1);
+				for(var r = 0; r < charactersOfSelectedWord.length; r++) {
+					if(userChoice === charactersOfSelectedWord[r].toLowerCase())
+						stringOfUnderlines = stringOfUnderlines.substr(0,r) + charactersOfSelectedWord[r] + stringOfUnderlines.substr(r+1);
 				}
 				document.getElementById("current_word").textContent = stringOfUnderlines;
 			}
@@ -277,12 +277,12 @@ document.onkeyup = function(event) {
 			document.getElementById("guesses_remaining").textContent = guessesRemaining;
 			document.getElementById("letters_guessed").textContent = lettersGuessed;
 
-			for(var i = 0; i < selectedWord.length; i++) {
-				charactersOfSelectedWord.push(selectedWord.charAt(i));
-				if(alphabet.indexOf(selectedWord.charAt(i).toLowerCase()) > -1)
+			for(var r = 0; r < selectedWord.length; r++) {
+				charactersOfSelectedWord.push(selectedWord.charAt(r));
+				if(alphabet.indexOf(selectedWord.charAt(r).toLowerCase()) > -1)
 					stringOfUnderlines = stringOfUnderlines.concat("_");
 				else
-					stringOfUnderlines = stringOfUnderlines.concat(selectedWord.charAt(i));
+					stringOfUnderlines = stringOfUnderlines.concat(selectedWord.charAt(r));
 			}
 
 			document.getElementById("current_word").textContent = stringOfUnderlines;
